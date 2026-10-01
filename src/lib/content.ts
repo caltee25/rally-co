@@ -82,3 +82,23 @@ export const services = [
     { name: "Indiana", school: "Indiana University", operator: "JT", students: "45,000" },
 
   ];
+  export const problems = [
+    {
+      title: "You can't buy your way in",
+      description:
+        "Ad buys and brand booths get ignored. Students respond to people they already trust inside their campus community, not to brands.",
+      proof: "Peer-led, not ad-led",
+    },
+    {
+      title: "Universities control access",
+      description:
+        "Schools regulate what gets promoted on campus, and most brands never get through the door. Our operators are enrolled students who already have the relationships it takes years to build.",
+      proof: "Operators at all 3 campuses",
+    },
+    {
+      title: "Peer trust is everything",
+      description:
+        "Students tune out branded content and act on recommendations from people they know. Our operators are those people, inside the communities you want to reach.",
+      proof: "Recommendations over advertising",
+    },
+  ];
