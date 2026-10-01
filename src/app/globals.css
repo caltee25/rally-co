@@ -1,115 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-html {
-  scroll-behavior: smooth;
+  --background: #fafaf7;
+  --foreground: #14130f;
+  --muted: #6b6a63;
+  --border: #e6e4dc;
+  --surface: #ffffff;
+  --accent: #2b4eff; /* swap for a brand color */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-instrument);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-:root {
-  --bg: #0a0a0a;
-  --text: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --accent: #ff4d2e; /* swap for Rally's real brand color */
-  --border: rgba(255, 255, 255, 0.1);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Navbar */
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 32px;
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-
-/* Shared reset so <button> looks like a link */
-#nav button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-}
-
-.nlogo-wrap {
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.nlinks {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.nl {
-  font-size: 0.95rem;
-  color: var(--text-muted) !important;
-  transition: color 0.2s ease;
-}
-
-.nl:hover {
-  color: var(--text) !important;
-}
-
-.ncta {
-  padding: 10px 20px;
-  border-radius: 999px;
-  background: var(--accent) !important;
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.ncta:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
-}
-
-/* Mobile: hide the text links, keep the CTA */
-@media (max-width: 700px) {
-  #nav {
-    padding: 12px 20px;
-  }
-  .nl {
-    display: none;
-  }
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
