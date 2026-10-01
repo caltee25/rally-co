@@ -1,3 +1,10 @@
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
-  return <h1>Rally Co. is coming soon</h1>;
+  return (
+    <main>
+      <Navbar />
+      {/* more sections will go here */}
+    </main>
+  );
 }
