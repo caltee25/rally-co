@@ -12,7 +12,7 @@ export default function Hero() {
       </h1>
       <p className="mt-6 max-w-xl text-lg text-muted">
         We put your brand in front of students through enrolled operators at
-        Pitt, Indiana, and Providence.
+        Pitt and Indiana
       </p>
       <div className="mt-10 flex flex-wrap gap-3">
         <Button href="/#contact">Start a project</Button>

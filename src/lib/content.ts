@@ -1,10 +1,67 @@
 export const services = [
-    { title: "Campus Activations", description: "Pop-ups, sampling, and demos where students actually spend time." },
-    { title: "Influencer Seeding", description: "Students with real influence, placing your product organically." },
-    { title: "Street Teams", description: "Vetted, trained students working their own campus." },
-    { title: "Event Marketing", description: "Game days, formals, and club events, at the moments that matter." },
-    { title: "Growth Experiments", description: "Fast, low-cost tests across campuses to find what works." },
-    { title: "Analytics & Reporting", description: "Clear dashboards and reports tied to agreed KPIs." },
+    {
+      title: "Campus Activations",
+      description:
+        "Pop-ups, sampling, and demos where students actually spend time.",
+      includes: [
+        "Location scouting & permits",
+        "Staffing & brand training",
+        "Full on-site execution",
+        "Real-time reporting",
+      ],
+    },
+    {
+      title: "Influencer Seeding",
+      description:
+        "Students with real influence, placing your product organically.",
+      includes: [
+        "Campus network mapping",
+        "Organic product placement",
+        "Content capture",
+        "Ripple effect tracking",
+      ],
+    },
+    {
+      title: "Street Teams",
+      description: "Vetted, trained students working their own campus.",
+      includes: [
+        "Recruitment & vetting",
+        "Brand training",
+        "Deployment strategy",
+        "Performance incentives",
+      ],
+    },
+    {
+      title: "Event Marketing",
+      description:
+        "Game days, formals, and club events, at the moments that matter.",
+      includes: [
+        "Event sourcing",
+        "Sponsorship negotiation",
+        "On-site activation",
+        "Post-event analysis",
+      ],
+    },
+    {
+      title: "Growth Experiments",
+      description: "Fast, low-cost tests across campuses to find what works.",
+      includes: [
+        "Hypothesis design",
+        "Multi-campus testing",
+        "Rapid iteration",
+        "Scalability assessment",
+      ],
+    },
+    {
+      title: "Analytics & Reporting",
+      description: "Clear dashboards and reports tied to agreed KPIs.",
+      includes: [
+        "Real-time dashboards",
+        "Weekly reports",
+        "ROI analysis",
+        "Strategic insights",
+      ],
+    },
   ];
   
   export const steps = [
@@ -17,11 +74,11 @@ export const services = [
   export const team = [
     { name: "Teddy", role: "Co-Founder · Pittsburgh", school: "University of Pittsburgh" },
     { name: "JT", role: "Co-Founder · Indiana", school: "Indiana University" },
-    { name: "Jack", role: "Co-Founder · Providence", school: "Providence College" },
+
   ];
   
   export const campuses = [
     { name: "Pittsburgh", school: "University of Pittsburgh", operator: "Teddy", students: "34,000+" },
     { name: "Indiana", school: "Indiana University", operator: "JT", students: "45,000" },
-    { name: "Providence", school: "Providence College", operator: "Jack", students: "5,000" },
+
   ];
