@@ -30,7 +30,7 @@ export default function ContactForm() {
   const [step, setStep] = useState(0);
   const [data, setData] = useState<FormData>(initialData);
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [honeypot, setHoneypot] = useState("");
 
   function update<K extends keyof FormData>(key: K, value: FormData[K]) {
@@ -69,18 +69,19 @@ export default function ContactForm() {
 
   async function submit() {
     setStatus("sending");
-
-    // Bots fill hidden fields, humans don't. Pretend it worked.
-    if (honeypot) {
+  
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, website: honeypot }),
+      });
+  
+      if (!res.ok) throw new Error("Request failed");
       setStatus("sent");
-      return;
+    } catch {
+      setStatus("error");
     }
-
-    // TODO: replace with a real request to our backend (next step)
-    console.log("Form submitted:", data);
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    setStatus("sent");
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -283,6 +284,12 @@ export default function ContactForm() {
           onChange={(e) => setHoneypot(e.target.value)}
         />
       </div>
+
+      {status === "error" && (
+        <p className="mt-6 text-sm text-red-600">
+            Something went wrong sending your message. Please try again.
+        </p>
+       )}
 
       {/* Buttons */}
       <div className="mt-8 flex items-center justify-between">
