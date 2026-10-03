@@ -1,5 +1,6 @@
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
+import Reveal from "@/components/ui/Reveal";
 import { campuses } from "@/lib/content";
 
 export default function Network() {
@@ -12,26 +13,25 @@ export default function Network() {
       />
 
       <div className="grid gap-6 md:grid-cols-2">
-        {campuses.map((campus) => (
-          <article
-            key={campus.name}
-            className="rounded-2xl border border-border bg-background p-8"
-          >
-            <p className="text-sm text-muted">{campus.location}</p>
-            <h3 className="mt-2 font-display text-4xl">{campus.school}</h3>
-            <p className="mt-4 text-muted">{campus.description}</p>
+        {campuses.map((campus, i) => (
+          <Reveal key={campus.name} delay={i * 100} className="h-full">
+            <article className="h-full rounded-2xl border border-border bg-background p-8 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
+              <p className="text-sm text-muted">{campus.location}</p>
+              <h3 className="mt-2 font-display text-4xl">{campus.school}</h3>
+              <p className="mt-4 text-muted">{campus.description}</p>
 
-            <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm">
-              <div>
-                <dt className="text-muted">Operator</dt>
-                <dd className="mt-1 font-medium">{campus.operator}</dd>
-              </div>
-              <div>
-                <dt className="text-muted">Students</dt>
-                <dd className="mt-1 font-medium">{campus.students}</dd>
-              </div>
-            </dl>
-          </article>
+              <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm">
+                <div>
+                  <dt className="text-muted">Operator</dt>
+                  <dd className="mt-1 font-medium">{campus.operator}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted">Students</dt>
+                  <dd className="mt-1 font-medium">{campus.students}</dd>
+                </div>
+              </dl>
+            </article>
+          </Reveal>
         ))}
       </div>
     </Section>

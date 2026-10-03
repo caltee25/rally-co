@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import Marquee from "@/components/sections/Marquee";
 import Problem from "@/components/sections/Problem";
 import Services from "@/components/sections/Services";
 import HowItWorks from "@/components/sections/HowItWorks";
@@ -11,6 +12,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Marquee />
+      <Problem />
       <Problem />
       <Services />
       <HowItWorks />

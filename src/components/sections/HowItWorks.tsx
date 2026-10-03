@@ -1,6 +1,8 @@
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { steps } from "@/lib/content";
+import Reveal from "@/components/ui/Reveal";
+
 
 export default function HowItWorks() {
   return (
@@ -12,9 +14,9 @@ export default function HowItWorks() {
       />
 
       <ol className="grid gap-10 md:grid-cols-4 md:gap-6">
-        {steps.map((step, i) => (
-          <li key={step.title} className="relative">
-            {/* Number badge + connecting line */}
+      {steps.map((step, i) => (
+        <li key={step.title} className="relative">
+          <Reveal delay={i * 100}>
             <div className="flex items-center">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-surface text-sm font-medium">
                 {i + 1}
@@ -26,8 +28,9 @@ export default function HowItWorks() {
 
             <h3 className="mt-6 font-display text-2xl">{step.title}</h3>
             <p className="mt-3 text-muted">{step.description}</p>
-          </li>
-        ))}
+          </Reveal>
+        </li>
+      ))}
       </ol>
     </Section>
   );
