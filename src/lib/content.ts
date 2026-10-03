@@ -91,10 +91,26 @@ export const services = [
   ];
   
   export const campuses = [
-    { name: "Pittsburgh", school: "University of Pittsburgh", operator: "Teddy", students: "34,000+" },
-    { name: "Indiana", school: "Indiana University", operator: "JT", students: "45,000" },
-
+    {
+      name: "Pittsburgh",
+      school: "University of Pittsburgh",
+      location: "Pittsburgh, PA",
+      students: "34,000+",
+      operator: "Teddy",
+      description:
+        "As an enrolled student at Pitt, Teddy works directly with the student organizations and campus offices that shape what gets promoted on campus.",
+    },
+    {
+      name: "Indiana",
+      school: "Indiana University",
+      location: "Bloomington, IN",
+      students: "45,000",
+      operator: "JT",
+      description:
+        "JT is enrolled at IU and embedded in the student community that shapes culture on one of the largest campuses in the country.",
+    },
   ];
+
   export const problems = [
     {
       title: "You can't buy your way in",
@@ -113,5 +129,38 @@ export const services = [
       description:
         "Students tune out branded content and act on recommendations from people they know. Our operators are those people, inside the communities you want to reach.",
       proof: "Recommendations over advertising",
+    },
+  ];
+
+  export const faqs = [
+    {
+      question: "How do you get on campus?",
+      answer:
+        "Our operators are enrolled students at each university, so they already know the organizations, offices, and processes that govern what happens on campus. We work within the system because we're part of it.",
+    },
+    {
+      question: "Do you tailor campaigns to our goals?",
+      answer:
+        "Always. Every engagement starts with understanding what you need, whether that's awareness, signups, downloads, or something else, and we build the campaign around it.",
+    },
+    {
+      question: "How quickly can you launch?",
+      answer:
+        "Timelines depend on the campaign, but most launch within one to two weeks of the first call. Because our operators are already embedded, there's no ramp-up period spent finding access.",
+    },
+    {
+      question: "Which schools are you at?",
+      answer:
+        "We currently operate at the University of Pittsburgh and Indiana University, and we add campuses one at a time, with the right operator on each.",
+    },
+    {
+      question: "What kinds of brands do you work with?",
+      answer:
+        "Any brand that wants to reach college students authentically: consumer goods, fintech, software, apparel, food and beverage, and services. If your audience is on a college campus, we can reach them.",
+    },
+    {
+      question: "How do you measure success?",
+      answer:
+        "We agree on KPIs before every campaign, such as reach, engagement, downloads, or signups, and report against them, so you always know what you're getting.",
     },
   ];
