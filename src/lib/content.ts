@@ -72,9 +72,22 @@ export const services = [
   ];
   
   export const team = [
-    { name: "Teddy", role: "Co-Founder · Pittsburgh", school: "University of Pittsburgh" },
-    { name: "JT", role: "Co-Founder · Indiana", school: "Indiana University" },
-
+    {
+      name: "Teddy",
+      role: "Co-Founder",
+      campus: "Pittsburgh",
+      school: "University of Pittsburgh",
+      year: "Sophomore",
+      bio: "Teddy leads Rally's presence at Pitt, building relationships with campus administration, student organizations, and the networks that shape student behavior. He manages brand partnerships and makes sure every activation is run with the credibility only an enrolled student can provide.",
+    },
+    {
+      name: "JT",
+      role: "Co-Founder",
+      campus: "Indiana",
+      school: "Indiana University",
+      year: "Junior",
+      bio: "JT operates Rally's largest network at IU, one of the biggest campuses in the country. He has direct ties to campus administration and the student communities that drive culture there, and brings prior hands-on experience in marketing and sales.",
+    },
   ];
   
   export const campuses = [
